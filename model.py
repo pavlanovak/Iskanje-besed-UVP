@@ -68,4 +68,45 @@ with open('/Users/pavlanovak/Desktop/uvp 2021/Iskanje-besed-UVP/Besede.txt', 'r'
 
     def nova_igra():
         beseda = random.choice(bazen_besed)
-        return Igra(beseda, [])
+        return Igra(beseda)
+
+class Ugibanje:
+    def __init__(self, stanje, datoteka_z_besedami):
+        self.igre = {}
+        self.datoteka_s_stanjem = stanje
+        self.datoteka_z_besedami = datoteka_z_besedami
+    
+    def prost_id_igre(self):
+        if self.igre == {}:
+            return 0
+        else:
+            return max(self.igre.keys()) + 1
+    
+    def nova_igra(self):
+        self.nalozi_igre_iz_datoteke()
+        with open(self.datoteka_z_besedami, 'r') as f:
+            bazen_besed = [beseda.strip().upper() for beseda in f.readlines()]
+        igra = nova_igra()
+        beseda = random.choice(bazen_besed)
+        igra = Igra(beseda)
+        id_igre = self.prost_id_igre()
+        self.igre[id_igre] = (igra, ZACETEK)
+        self.zapisi_igro_v_datoteko()
+        return id_igre
+
+    def zapisi_igro_v_datoteko(self):
+        with open(self.datoteka_s_stanjem, 'w') as f:
+            igre_predelano = {id_igre : ((igra.beseda, igra.ugibanja, igra.stanje, igra.tocke), stanje) for (id_igre, (igra, stanje)) in self.igre.items()}
+            json.dump(igre_predelano, f)
+    
+    def nalozi_igre_iz_datoteke(self):
+            with open(self.datoteka_s_stanjem, 'r') as f:
+                igre_predelano = json.load(f)
+                self.igre = { int(id_igre): (Igra(beseda, ugibanja, stanje, tocke), stanje) for (id_igre, ((beseda, ugibanja, stanje, tocke), stanje)) in igre_predelano.items()}
+            
+    def ugibaj(self, id_igre, beseda):
+        self.nalozi_igre_iz_datoteke()
+        (igra, _) = self.igre[id_igre]
+        stanje = igra.ugibaj(beseda)
+        self.igre[id_igre] = (igra, stanje)
+        self.zapisi_igro_v_datoteko()
