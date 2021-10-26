@@ -12,4 +12,8 @@ Pred zagonom je potrebno namestiti še dependency-je, in sicer je potrebno pogna
 
 `python -m pip install -r requirements.txt`
 
+*To je seveda potrebno urejati znotraj direktorija, kjer se nahaja koda.
+
 Program se lahko zažene tudi z ukazom:
+
+`python3 ugibanje.py`
