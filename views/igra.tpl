@@ -1,7 +1,6 @@
 % rebase('base.tpl', title='Igra')
 <div id="igra">
     <p>POMESANA BESEDA JE: {{mesana_beseda}}</p>
-    <h1>ODSTRANI ME: {{beseda}}</h1>
     <p>Poskusili ste {{poskus}} krat</p>
 
     % if rezultat:
