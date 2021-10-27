@@ -9,7 +9,7 @@
             <!-- insert your sidebar items here -->
             <h3>Najnovejše</h3>
             <h4>Nova igra</h4>
-            <h5>1. Oktober 2021</h5>
+            <h5>1. oktober 2021</h5>
             <p>Igraj igro ugibanja. Več o njej lahko vprašaš mene.<br /><a href="https://www.facebook.com/pavlanovakk/">Klikni, če želiš izvedeti več.</a></p>
           </div>
           <div class="sidebar_base"></div>
