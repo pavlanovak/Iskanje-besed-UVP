@@ -5,8 +5,7 @@ DATOTEKA_Z_BESEDAMI = "./Besede.txt"
 
 class Igra:
     """"Razred Igra
-    
-    Hrani stanje trenutne igre (beseda, st ugibanj, pomesano besedo)
+        Hrani stanje trenutne igre (beseda, st ugibanj, pomesano besedo)
     """
     def __init__(self):
         self.beseda = self.izberi_besedo()
