@@ -10,10 +10,11 @@ Projekt za UVP 2021
 
 Pred zagonom je potrebno namestiti še dependency-je, in sicer je potrebno pognati ukaz:
 
-`python -m pip install -r requirements.txt`
+`python3 -m pip3 install -r requirements.txt`
 
 *To je seveda potrebno urejati znotraj direktorija, kjer se nahaja koda.
 
+Program se zažene tako, da se požene ugibanje.py.
 Program se lahko zažene tudi z ukazom:
 
 `python3 ugibanje.py`
