@@ -2,9 +2,6 @@ import bottle
 from igra import Igra
 import os
 
-app = bottle.app()
-
-
 abs_app_dir_path = os.path.dirname(os.path.realpath(__file__))
 abs_views_path = os.path.join(abs_app_dir_path, 'views')
 bottle.TEMPLATE_PATH.insert(0, abs_views_path ) # nastavitev direktorija za serviranje staticnih datotek
