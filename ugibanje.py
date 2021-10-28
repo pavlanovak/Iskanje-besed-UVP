@@ -67,4 +67,8 @@ def views(path):
 def error_404(error):
     return "Ta stran ne obstaja!"
 
+@bottle.error(405)
+def error_405(error):
+    return "Žal ta opcija še ni na voljo!"
+
 bottle.run(reloader=True, debug=True)

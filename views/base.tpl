@@ -25,7 +25,7 @@
         </section>
     <div id="content_footer"></div>
     <div id="footer">
-      <p><a href="/">Home</a> | <a href="views/examples.html">Examples</a> | <a href="views/page.html">A Page</a> | <a href="views/another_page.html">Another Page</a> | <a href="views/contact.html">Contact Us</a></p>
+      <p><a href="/">Osnovna stran</a> | <a href="views/examples.html">Ne vodi</a> | <a href="views/page.html">Nikamor</a> | <a href="views/another_page.html">Ne klikaj</a> | <a href="views/contact.html">Samo za lepši izgled</a></p>
       <p>Copyright &copy; simplestyle_purple | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Website templates</a></p>
     </div>
   </div>
