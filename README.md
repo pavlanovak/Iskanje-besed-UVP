@@ -6,9 +6,8 @@ Projekt za UVP 2021
 - python3
 
 ## Navodila za zagon
-Če se koda poganja na macOS-u, je potrebno iz open ukazov odstraniti UTF-8 encoding.
 
-Pred zagonom je potrebno namestiti še dependency-je, in sicer je potrebno pognati ukaz:
+Pred zagonom je potrebno namestiti dependency-je, in sicer je potrebno pognati ukaz:
 
 `python3 -m pip3 install -r requirements.txt`
 
